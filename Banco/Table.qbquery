@@ -1,0 +1,21 @@
+﻿create database clinica_vet;
+
+create table zona(
+cod int unique auto_increment primary key not null,
+nome varchar(20) not null unique);
+
+create table bairro(
+cod int unique auto_increment primary key not null,
+nome varchar(30) not null unique,
+cod_zona int not null,
+foreign key (cod_zona) references zona(cod));
+
+create table clinica(
+cod int unique auto_increment primary key not null,
+nome varchar(255) not null,
+endereco varchar(255) not null,
+cep varchar(9) not null unique,
+telefone int,
+cod_bairro int not null,
+horario_atd varchar(30),
+foreign key (cod_bairro) references bairro(cod));

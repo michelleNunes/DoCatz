@@ -1,0 +1,7 @@
+﻿insert into zona values (null,'Norte');
+insert into zona values (null,'Centro-Sul');
+insert into zona values (null,'Leste');
+insert into zona values (null,'Centro-Oeste');
+insert into zona values (null,'Oeste');
+insert into zona values (null,'Sul');
+
